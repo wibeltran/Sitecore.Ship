@@ -11,7 +11,6 @@ namespace Sitecore.Ship.Core.Test.HttpRequestAuthoriser.Logging
             CheckRequests
                 .Setup(x => x.IsLocal)
                 .Returns(true);
-
             Logger
                 .Setup(x => x.Write(It.IsAny<string>()))
                 .Callback<string>(x => DiagnosticMessage = x);
